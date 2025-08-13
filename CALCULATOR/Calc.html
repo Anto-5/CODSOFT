@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Project</title>
+    <link rel="stylesheet" href="css/glamour.css">
+</head>
+<body>
+
+    <!-- Big box thing for the calculator -->
+    <div class="calculator">
+
+        <!-- This is the screen where the numbers and answers show up. I made it disabled so no random random letters can be typed in it -->
+        <input type="text" id="display" disabled>
+
+        <!-- All the calculator buttons are inside here -->
+        <div class="buttons">
+
+            <!--  C button deletes everything  -->
+            <button class="clear-btn" onclick="clearAll()">C</button>
+
+            <!-- Backspace button that deletes the last thing typed -->
+            <button onclick="deleteLast()">⌫</button>
+
+            <!-- The brackets -->
+            <button onclick="addToDisplay('(')">(</button>
+            <button onclick="addToDisplay(')')">)</button>
+
+            <!-- Numbers 7, 8, 9 and division sign in row 1 -->
+            <button onclick="addToDisplay('7')">7</button>
+            <button onclick="addToDisplay('8')">8</button>
+            <button onclick="addToDisplay('9')">9</button>
+            <button onclick="addToDisplay('/')">/</button>
+
+            <!-- Numbers 4, 5, 6 and the multiplication button in row 2 -->
+            <button onclick="addToDisplay('4')">4</button>
+            <button onclick="addToDisplay('5')">5</button>
+            <button onclick="addToDisplay('6')">6</button>
+            <button onclick="addToDisplay('*')">x</button>
+
+            <!-- Numbers 1, 2, 3 and the minus sign in row 3-->
+            <button onclick="addToDisplay('1')">1</button>
+            <button onclick="addToDisplay('2')">2</button>
+            <button onclick="addToDisplay('3')">3</button>
+            <button onclick="addToDisplay('-')">-</button>
+
+            <!-- Decimal point , 0 , percentage and plus sign  in row 4-->
+            <button onclick="addToDisplay('.')">.</button>
+            <button onclick="addToDisplay('0')">0</button>
+            <button onclick="addToDisplay('%')">%</button>
+            <button onclick="addToDisplay('+')">+</button>
+
+            <!-- equals button -->
+            <button class="equals" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script src="js/function.js"></script>
+</body>
+</html>
